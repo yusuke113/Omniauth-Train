@@ -1,0 +1,326 @@
+current directory: /Users/yusuke/Sample/login-train/vendor/bundle/ruby/2.6.0/gems/sqlite-1.0.2/ext/sqlite
+/Users/Yusuke/.rbenv/versions/2.6.6/bin/ruby -I /Users/Yusuke/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20200823-2998-17u7h7y.rb extconf.rb
+checking for malloc()... yes
+checking for free()... yes
+creating Makefile
+
+current directory: /Users/yusuke/Sample/login-train/vendor/bundle/ruby/2.6.0/gems/sqlite-1.0.2/ext/sqlite
+make "DESTDIR=" clean
+
+current directory: /Users/yusuke/Sample/login-train/vendor/bundle/ruby/2.6.0/gems/sqlite-1.0.2/ext/sqlite
+make "DESTDIR="
+compiling main.c
+compiling ruby_sqlite3.c
+ruby_sqlite3.c:204:49: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+        c->rc = sqlite3_prepare(c->handle, sql, strlen(sql), &stmt, NULL);
+                ~~~~~~~~~~~~~~~                 ^~~~~~~~~~~
+ruby_sqlite3.c:10:14: warning: unused function 'm_aborted' [-Wunused-function]
+static VALUE m_aborted(VALUE self);
+             ^
+2 warnings generated.
+compiling ruby_sqlite3_stmt.c
+ruby_sqlite3_stmt.c:94:40: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    int rc = sqlite3_prepare(db, zSQL, strlen(zSQL), &stmt->handle, NULL);
+             ~~~~~~~~~~~~~~~           ^~~~~~~~~~~~
+ruby_sqlite3_stmt.c:268:9: warning: unused variable 'type' [-Wunused-variable]
+    int type = sqlite3_column_type(stmt->handle, i);
+        ^
+ruby_sqlite3_stmt.c:292:9: warning: unused variable 'type' [-Wunused-variable]
+    int type = sqlite3_column_type(stmt->handle, i);
+        ^
+ruby_sqlite3_stmt.c:316:9: warning: unused variable 'type' [-Wunused-variable]
+    int type = sqlite3_column_type(stmt->handle, i);
+        ^
+ruby_sqlite3_stmt.c:339:9: warning: unused variable 'type' [-Wunused-variable]
+    int type = sqlite3_column_type(stmt->handle, i);
+        ^
+ruby_sqlite3_stmt.c:151:7: warning: unused function 'm_column_type' [-Wunused-function]
+VALUE m_column_type(VALUE self, VALUE ordinal)
+      ^
+6 warnings generated.
+compiling sqlite3_dist.c
+sqlite3_dist.c:21469:11: warning: initializing 'char *' with an expression of type 'const char [7]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  { 0, 6, "second", 464269060800.0, 86400000.0/(24.0*60.0*60.0) },
+          ^~~~~~~~
+sqlite3_dist.c:21470:11: warning: initializing 'char *' with an expression of type 'const char [7]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  { 0, 6, "minute", 7737817680.0,   86400000.0/(24.0*60.0)      },
+          ^~~~~~~~
+sqlite3_dist.c:21471:11: warning: initializing 'char *' with an expression of type 'const char [5]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  { 0, 4, "hour",   128963628.0,    86400000.0/24.0             },
+          ^~~~~~
+sqlite3_dist.c:21472:11: warning: initializing 'char *' with an expression of type 'const char [4]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  { 0, 3, "day",    5373485.0,      86400000.0                  },
+          ^~~~~
+sqlite3_dist.c:21473:11: warning: initializing 'char *' with an expression of type 'const char [6]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  { 1, 5, "month",  176546.0,       30.0*86400000.0             },
+          ^~~~~~~
+sqlite3_dist.c:21474:11: warning: initializing 'char *' with an expression of type 'const char [5]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  { 2, 4, "year",   14713.0,        365.0*86400000.0            },
+          ^~~~~~
+sqlite3_dist.c:27644:17: warning: assigning to 'char *' from 'const char [4]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+          bufpt = "NaN";
+                ^ ~~~~~
+sqlite3_dist.c:27844:17: warning: assigning to 'char *' from 'const char [1]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+          bufpt = "";
+                ^ ~~
+sqlite3_dist.c:27902:29: warning: assigning to 'char *' from 'const char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if( isnull ) escarg = (xtype==etSQLESCAPE2 ? "NULL" : "(NULL)");
+                            ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:33584:8: warning: assigning to 'char *' from 'const char [1]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  zErr = "";
+       ^ ~~
+sqlite3_dist.c:33723:14: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+    do{ rc = osWrite(fd, "S", 1); }while( rc<0 && errno==EINTR );
+           ~ ^~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:32768:21: note: expanded from macro 'osWrite'
+#define osWrite     ((ssize_t(*)(int,const void*,size_t))aSyscall[11].pCurrent)
+                    ^
+sqlite3_dist.c:35467:42: warning: implicit conversion loses integer precision: 'unsigned long long' to 'int' [-Wshorten-64-to-32]
+        int sharedLockByte = SHARED_FIRST+pInode->sharedByte;
+            ~~~~~~~~~~~~~~   ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:35618:11: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+    got = osPread(id->h, pBuf, cnt, offset);
+        ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:32758:21: note: expanded from macro 'osPread'
+#define osPread     ((ssize_t(*)(int,void*,size_t,off_t))aSyscall[9].pCurrent)
+                    ^
+sqlite3_dist.c:35685:35: warning: implicit conversion loses integer precision: 'long long' to 'int' [-Wshorten-64-to-32]
+      int nCopy = pFile->mmapSize - offset;
+          ~~~~~   ~~~~~~~~~~~~~~~~^~~~~~~~
+sqlite3_dist.c:37050:33: warning: implicit conversion loses integer precision: 'long long' to 'int' [-Wshorten-64-to-32]
+          for(iPg=(sStat.st_size/pgsz); iPg<(nByte/pgsz); iPg++){
+                 ~ ~~~~~~~~~~~~~^~~~~
+sqlite3_dist.c:38667:17: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+        nByte = osReadlink(zIn, zDel, nOut-1);
+              ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:32855:20: note: expanded from macro 'osReadlink'
+#define osReadlink ((ssize_t(*)(const char*,char*,size_t))aSyscall[26].pCurrent)
+                   ^
+sqlite3_dist.c:38798:17: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+      do{ got = osRead(fd, zBuf, nBuf); }while( got<0 && errno==EINTR );
+              ~ ^~~~~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:32751:21: note: expanded from macro 'osRead'
+#define osRead      ((ssize_t(*)(int,void*,size_t))aSyscall[8].pCurrent)
+                    ^
+sqlite3_dist.c:39109:11: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    len = strlcat(lPath, "sqliteplocks", maxLen);    
+        ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_string.h:119:3: note: expanded from macro 'strlcat'
+                __builtin___strlcat_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:39117:11: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    len = strlcat(lPath, "/", maxLen);
+        ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_string.h:119:3: note: expanded from macro 'strlcat'
+                __builtin___strlcat_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:39410:19: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+        int len = osPread(conchFile->h, tBuf, PROXY_MAXCONCHLEN, 0);
+            ~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:32758:21: note: expanded from macro 'osPread'
+#define osPread     ((ssize_t(*)(int,void*,size_t,off_t))aSyscall[9].pCurrent)
+                    ^
+sqlite3_dist.c:39573:37: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+        writeSize = PROXY_PATHINDEX + strlen(&writeBuffer[PROXY_PATHINDEX]);
+                  ~ ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:39788:53: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    int len = strlen((char *)pFile->lockingContext) - strlen(DOTLOCK_SUFFIX);
+        ~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:71661:24: warning: implicit conversion loses integer precision: 'const sqlite3_int64' (aka 'const long long') to 'int' [-Wshorten-64-to-32]
+        x2.nData = pX->nKey;
+                 ~ ~~~~^~~~
+sqlite3_dist.c:77642:13: warning: assigning to 'char *' from 'const char [5]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        zP4 = "NULL";
+            ^ ~~~~~~
+sqlite3_dist.c:77645:13: warning: assigning to 'char *' from 'const char [7]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        zP4 = "(blob)";
+            ^ ~~~~~~~~
+sqlite3_dist.c:82587:42: warning: implicit conversion loses integer precision: 'sqlite3_uint64' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+    rc = sqlite3_bind_zeroblob(pStmt, i, n);
+         ~~~~~~~~~~~~~~~~~~~~~           ^
+sqlite3_dist.c:86294:21: warning: implicit conversion loses integer precision: 'i64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    pOut->u.nZero = nZero;
+                  ~ ^~~~~
+sqlite3_dist.c:93323:47: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      int iListOff = (u8*)pSorter->list.pList - pSorter->list.aMemory;
+          ~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:94415:40: warning: implicit conversion loses integer precision: 'long long' to 'int' [-Wshorten-64-to-32]
+        nChunk = copy.endpoint.iOffset - iOff;
+               ~ ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+sqlite3_dist.c:94506:23: warning: implicit conversion loses integer precision: 'long long' to 'int' [-Wshorten-64-to-32]
+      p->nSize = iAmt + iOfst;
+               ~ ~~~~~^~~~~~~
+sqlite3_dist.c:103142:25: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      iOff = pBest->t.z - zSql;
+           ~ ~~~~~~~~~~~^~~~~~
+sqlite3_dist.c:107979:45: warning: passing 'const char [1]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+   && sqlite3StrICmp(sqlite3ColumnType(pCol,""), "INTEGER")==0
+                                            ^~
+sqlite3_dist.c:30167:60: note: passing argument to parameter 'zDflt' here
+SQLITE_PRIVATE char *sqlite3ColumnType(Column *pCol, char *zDflt){
+                                                           ^
+sqlite3_dist.c:108196:10: warning: assigning to 'char *' from 'const char [1]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    zSep = "";
+         ^ ~~
+sqlite3_dist.c:108197:11: warning: assigning to 'char *' from 'const char [2]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    zSep2 = ",";
+          ^ ~~~
+sqlite3_dist.c:108198:10: warning: assigning to 'char *' from 'const char [2]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    zEnd = ")";
+         ^ ~~~
+sqlite3_dist.c:108200:10: warning: assigning to 'char *' from 'const char [4]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    zSep = "\n  ";
+         ^ ~~~~~~
+sqlite3_dist.c:108201:11: warning: assigning to 'char *' from 'const char [5]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    zSep2 = ",\n  ";
+          ^ ~~~~~~~
+sqlite3_dist.c:108202:10: warning: assigning to 'char *' from 'const char [3]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    zEnd = "\n)";
+         ^ ~~~~~
+sqlite3_dist.c:108627:13: warning: assigning to 'char *' from 'const char [6]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      zType = "table";
+            ^ ~~~~~~~
+sqlite3_dist.c:108628:14: warning: assigning to 'char *' from 'const char [6]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      zType2 = "TABLE";
+             ^ ~~~~~~~
+sqlite3_dist.c:108632:13: warning: assigning to 'char *' from 'const char [5]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      zType = "view";
+            ^ ~~~~~~
+sqlite3_dist.c:108633:14: warning: assigning to 'char *' from 'const char [5]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      zType2 = "VIEW";
+             ^ ~~~~~~
+sqlite3_dist.c:113239:24: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    sqlite3_randomness(n, p);
+    ~~~~~~~~~~~~~~~~~~ ^
+sqlite3_dist.c:113240:44: warning: implicit conversion loses integer precision: 'sqlite3_int64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    sqlite3_result_blob(context, (char*)p, n, sqlite3_free);
+    ~~~~~~~~~~~~~~~~~~~                    ^
+sqlite3_dist.c:119923:26: warning: implicit conversion loses integer precision: 'u64' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+        sqlite3_snprintf(nMsg, zErrmsg, 
+        ~~~~~~~~~~~~~~~~ ^~~~
+sqlite3_dist.c:119925:36: warning: implicit conversion loses integer precision: 'unsigned long long' to 'int' [-Wshorten-64-to-32]
+        sqlite3OsDlError(pVfs, nMsg-1, zErrmsg);
+        ~~~~~~~~~~~~~~~~       ~~~~^~
+sqlite3_dist.c:119969:26: warning: implicit conversion loses integer precision: 'u64' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+        sqlite3_snprintf(nMsg, zErrmsg,
+        ~~~~~~~~~~~~~~~~ ^~~~
+sqlite3_dist.c:119971:36: warning: implicit conversion loses integer precision: 'unsigned long long' to 'int' [-Wshorten-64-to-32]
+        sqlite3OsDlError(pVfs, nMsg-1, zErrmsg);
+        ~~~~~~~~~~~~~~~~       ~~~~^~
+sqlite3_dist.c:121167:5: warning: initializing 'char *const' with an expression of type 'const char [7]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    "delete", "persist", "off", "truncate", "memory"
+    ^~~~~~~~
+sqlite3_dist.c:121167:15: warning: initializing 'char *const' with an expression of type 'const char [8]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    "delete", "persist", "off", "truncate", "memory"
+              ^~~~~~~~~
+sqlite3_dist.c:121167:26: warning: initializing 'char *const' with an expression of type 'const char [4]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    "delete", "persist", "off", "truncate", "memory"
+                         ^~~~~
+sqlite3_dist.c:121167:33: warning: initializing 'char *const' with an expression of type 'const char [9]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    "delete", "persist", "off", "truncate", "memory"
+                                ^~~~~~~~~~
+sqlite3_dist.c:121167:45: warning: initializing 'char *const' with an expression of type 'const char [7]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    "delete", "persist", "off", "truncate", "memory"
+                                            ^~~~~~~~
+sqlite3_dist.c:121169:8: warning: initializing 'char *const' with an expression of type 'const char [4]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+     , "wal"
+       ^~~~~
+sqlite3_dist.c:122020:39: warning: passing 'const char [1]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+               sqlite3ColumnType(pCol,""),
+                                      ^~
+sqlite3_dist.c:30167:60: note: passing argument to parameter 'zDflt' here
+SQLITE_PRIVATE char *sqlite3ColumnType(Column *pCol, char *zDflt){
+                                                           ^
+sqlite3_dist.c:122609:21: warning: assigning to 'char *' from 'const char [3]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        aOp[2].p4.z = "ok";
+                    ^ ~~~~
+sqlite3_dist.c:122647:9: warning: initializing 'char *' with an expression of type 'const char [5]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      { "UTF8",     SQLITE_UTF8        },
+        ^~~~~~
+sqlite3_dist.c:122648:9: warning: initializing 'char *' with an expression of type 'const char [6]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      { "UTF-8",    SQLITE_UTF8        },  /* Must be element [1] */
+        ^~~~~~~
+sqlite3_dist.c:122649:9: warning: initializing 'char *' with an expression of type 'const char [9]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      { "UTF-16le", SQLITE_UTF16LE     },  /* Must be element [2] */
+        ^~~~~~~~~~
+sqlite3_dist.c:122650:9: warning: initializing 'char *' with an expression of type 'const char [9]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      { "UTF-16be", SQLITE_UTF16BE     },  /* Must be element [3] */
+        ^~~~~~~~~~
+sqlite3_dist.c:122651:9: warning: initializing 'char *' with an expression of type 'const char [8]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      { "UTF16le",  SQLITE_UTF16LE     },
+        ^~~~~~~~~
+sqlite3_dist.c:122652:9: warning: initializing 'char *' with an expression of type 'const char [8]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      { "UTF16be",  SQLITE_UTF16BE     },
+        ^~~~~~~~~
+sqlite3_dist.c:122653:9: warning: initializing 'char *' with an expression of type 'const char [7]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      { "UTF-16",   0                  }, /* SQLITE_UTF16NATIVE */
+        ^~~~~~~~
+sqlite3_dist.c:122654:9: warning: initializing 'char *' with an expression of type 'const char [6]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+      { "UTF16",    0                  }, /* SQLITE_UTF16NATIVE */
+        ^~~~~~~
+sqlite3_dist.c:122724:28: warning: implicit conversion loses integer precision: 'const u64' (aka 'const unsigned long long') to 'int' [-Wshorten-64-to-32]
+    int iCookie = pPragma->iArg;  /* Which cookie to read or write */
+        ~~~~~~~   ~~~~~~~~~^~~~
+sqlite3_dist.c:125701:26: warning: assigning to 'char *' from 'const char [10]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    case TK_ALL:       z = "UNION ALL";   break;
+                         ^ ~~~~~~~~~~~
+sqlite3_dist.c:125702:26: warning: assigning to 'char *' from 'const char [10]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    case TK_INTERSECT: z = "INTERSECT";   break;
+                         ^ ~~~~~~~~~~~
+sqlite3_dist.c:125703:26: warning: assigning to 'char *' from 'const char [7]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    case TK_EXCEPT:    z = "EXCEPT";      break;
+                         ^ ~~~~~~~~
+sqlite3_dist.c:125704:26: warning: assigning to 'char *' from 'const char [6]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    default:           z = "UNION";       break;
+                         ^ ~~~~~~~
+sqlite3_dist.c:126222:14: warning: assigning to 'char *' from 'const char [6]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        zCol = "rowid";
+             ^ ~~~~~~~
+sqlite3_dist.c:126311:15: warning: assigning to 'char *' from 'const char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        zName = iCol>=0 ? pTab->aCol[iCol].zName : "rowid";
+              ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sqlite3_dist.c:129280:29: warning: implicit conversion loses integer precision: 'u64' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+    int flags = pParse->db->flags;
+        ~~~~~   ~~~~~~~~~~~~^~~~~
+sqlite3_dist.c:134587:60: warning: passing 'const char [1]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        char *zType = sqlite3ColumnType(&pTab->aCol[iCol], "");
+                                                           ^~
+sqlite3_dist.c:30167:60: note: passing argument to parameter 'zDflt' here
+SQLITE_PRIVATE char *sqlite3ColumnType(Column *pCol, char *zDflt){
+                                                           ^
+sqlite3_dist.c:140458:15: warning: assigning to 'char *' from 'const char [11]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  pIdx->zName = "auto-index";
+              ^ ~~~~~~~~~~~~
+sqlite3_dist.c:145383:28: warning: implicit conversion loses integer precision: 'long long' to 'int' [-Wshorten-64-to-32]
+    int nSize = (p->nTotal / p->nParam);
+        ~~~~~    ~~~~~~~~~~^~~~~~~~~~~
+sqlite3_dist.c:155767:32: warning: incompatible function pointer types assigning to 'int (*)(void *, int, int)' from 'int (*)(void *, int)' [-Wincompatible-function-pointer-types]
+  db->lockEventHandlers.busy   = xBusy; 
+                               ^ ~~~~~
+sqlite3_dist.c:155768:32: warning: incompatible function pointer types assigning to 'int (*)(void *, int, int)' from 'int (*)(void *, int)' [-Wincompatible-function-pointer-types]
+  db->lockEventHandlers.unlock = xUnlock; 
+                               ^ ~~~~~~~
+sqlite3_dist.c:155770:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+sqlite3_dist.c:156575:21: warning: assigning to 'char *' from 'const char [6]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+          zModeType = "cache";
+                    ^ ~~~~~~~
+sqlite3_dist.c:156590:21: warning: assigning to 'char *' from 'const char [7]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+          zModeType = "access";
+                    ^ ~~~~~~~~
+sqlite3_dist.c:156860:23: warning: assigning to 'char *' from 'const char [5]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  db->aDb[0].zDbSName = "main";
+                      ^ ~~~~~~
+sqlite3_dist.c:156862:23: warning: assigning to 'char *' from 'const char [5]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  db->aDb[1].zDbSName = "temp";
+                      ^ ~~~~~~
+sqlite3_dist.c:14306:20: warning: unused function 'sqlite3BtreeLockEventHandlers' [-Wunused-function]
+SQLITE_PRIVATE int sqlite3BtreeLockEventHandlers(Btree*,LockEventHandlers*);
+                   ^
+83 warnings generated.
+linking shared-object sqlite/sqlite.bundle
+
+current directory: /Users/yusuke/Sample/login-train/vendor/bundle/ruby/2.6.0/gems/sqlite-1.0.2/ext/sqlite
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 sqlite.bundle ./.gem.20200823-2998-1u72fzj/sqlite
