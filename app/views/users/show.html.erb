@@ -1,0 +1,55 @@
+<div class="container">
+  <h1 class="my-5"><%= @user.username %>のプロフィール</h1>
+  <table class="table table-striped">
+    <tr class="row">
+      <td class="col-4">
+        <h6>ユーザーネーム</h6>
+      </td>
+      <td class="col-8">
+        <h6>
+          <%= @user.username %>
+        </h6>
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="col-4">
+        <h6>メールアドレス</h6>
+      </td>
+      <td class="col-8">
+        <h6>
+          <%= @user.email %>
+        </h6>
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="col-4">
+        <h6>認証SNS</h6>
+      </td>
+      <td class="col-8">
+        <h6>
+          <%= @user.provider %>
+        </h6>
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="col-4">
+        <h6>uid</h6>
+      </td>
+      <td class="col-8">
+        <h6>
+          <%= @user.uid %>
+        </h6>
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="col-4">
+        <h6>アカウント作成日</h6>
+      </td>
+      <td class="col-8">
+        <h6>
+          <%= @user.created_at.strftime('%Y-%m-%d') %>
+        </h6>
+      </td>
+    </tr>
+  </table>
+</div>

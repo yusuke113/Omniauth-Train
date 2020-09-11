@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>LoginTrain</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>
-  </head>
+<head>
+  <title>LoginTrain</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_pack_tag 'application' %>
+</head>
+
+<body>
+  <div style="text-align: center; padding: 10px; background: #000; color: #fff;">
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+  </div>
+  <div class="container">
     <%= yield %>
-  </body>
+  </div>
+</body>
+
 </html>
